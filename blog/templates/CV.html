@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block contenido %}
+
+<html>	
+    <head>
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <!-----------------------------------------------| IMPORTAR |-------------------------------------------------------------->
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="materialize/css/materialize.css">
+        <title>Inicio</title>
+    </head>
+    <body class="red">
+
+        <!-----------------------------------------------| IMPORTAR JS |-------------------------------------------------------------->
+        <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!-----------------------------------------------| IMPORTAR JS |-------------------------------------------------------------->
+
+        <ul id='dropdown1' class='dropdown-content'>
+
+            <li><a href="Image.html">Galeria</a></li>
+            <li class="divider"></li>
+            <li><a href="cronometro.html">Cronometro</a></li>
+            <li class="divider"></li>
+            <li><a href="conversor.html">Conversor de Moneda</a></li>
+            <li class="divider"></li>
+            <li><a href="boton_magico.html">Boton Troll</a></li>
+            <li class="divider"></li>
+            <li><a href="Calculadora.html">Calculadora</a></li>
+
+        </ul>
+
+        
+        <br></br>
+    
+        <div class="center-align">
+            <IMG SRC="/static/img/john.jpg"><br>
+                </div>
+            <div class="center-align">
+                <h3>INFORMACION PERSONAL</h3><br>
+                Nombre:Fabrizio<br>
+                Apellido:Cuassolo<br>
+                Edad:16<br>
+                Correo Elecetronico: fabricuassolo13@gmail.com<br>
+                Direccion: Gustavo P Alvear 3456 Barrio Los Gigantes.
+                <br>
+                Telefono:3515234357<br>
+                <br>
+            </div>
+           
+    </body>
+</html>
+{% endblock %}

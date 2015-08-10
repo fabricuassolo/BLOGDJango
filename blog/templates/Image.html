@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block contenido %}
+
+<html>	
+    <head>
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <!-----------------------------------------------| IMPORTAR |-------------------------------------------------------------->
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="materialize/css/materialize.css">
+        <title>Inicio</title>
+    </head>
+    <body onload="cambiar()" class="red">
+
+        <!-----------------------------------------------| IMPORTAR JS |-------------------------------------------------------------->
+        <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <!-----------------------------------------------| IMPORTAR JS |-------------------------------------------------------------->
+
+        <ul id='dropdown1' class='dropdown-content'>
+
+            <li><a href="Image.html">Galeria</a></li>
+            <li class="divider"></li>
+            <li><a href="cronometro.html">Cronometro</a></li>
+            <li class="divider"></li>
+            <li><a href="conversor.html">Conversor de Moneda</a></li>
+            <li class="divider"></li>
+            <li><a href="boton_magico.html">Boton Troll</a></li>
+            <li class="divider"></li>
+            <li><a href="Calculadora.html">Calculadora</a></li>
+
+        </ul>
+
+
+        
+            </div>
+        </nav>
+
+
+        <div class="content" align="center">
+            <h3>Galeria de Imagenes</h3>
+            <progress id="barra" max="100" value="0"></progress><br><br>
+            <img id="img" height = "400px" width="600px" src="/static/img/1.jpg"/>
+
+            <br></br>
+        <br></br>
+
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    var images = ["/static/img/1.jpg","/static/img/2.jpg","/static/img/3.jpg","/static/img/4.jpg"];
+    var tiempo = setInterval(function(){load();},1000);
+
+    $(document).ready(function(){
+        load();
+    });
+
+    var barra = document.getElementById("barra");
+    var img = document.getElementById("img");
+    a = 0;
+    i = 1;
+    var time = setInterval(load, 200);
+
+    function load(){
+        a +=5 ;
+        barra.value = a;
+        if (barra.value == 100){
+            a=0;
+            barra.value = a;
+            img.setAttribute("src",images[i]);
+            i++;
+            if(i==4){i=0}
+        }
+    }
+</script>
+{% endblock %}
